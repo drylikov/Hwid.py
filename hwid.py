@@ -5,9 +5,11 @@ from hashlib import sha256
 from winreg import HKEY_LOCAL_MACHINE, OpenKey, QueryValueEx
 
 
+
 def get_hwid_from_session_id(session_id):
     hwid_b64 = [i[5:] for i in session_id.split(";") if "Hwid" in i][0]
     return b64decode(hwid_b64)
+
 
 
 def get_hwid_from_genuine_ticket(xml_str):
