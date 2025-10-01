@@ -22,6 +22,7 @@ def get_hwid_from_genuine_ticket(xml_str):
     return get_hwid_from_session_id(session_id)
 
 
+
 def get_hwid_from_license_xml(xml_str):
     root = ET.fromstring(xml_str)
     migrated_license_data = root.findtext(
@@ -29,6 +30,7 @@ def get_hwid_from_license_xml(xml_str):
     )
     genuine_ticket_str = b64decode(migrated_license_data).decode()
     return get_hwid_from_genuine_ticket(genuine_ticket_str)
+
 
 
 def get_hwid_from_clipup():
