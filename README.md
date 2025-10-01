@@ -1,5 +1,5 @@
-# hwid.py
+# Hwid.py
 
 
 
-Pure python activator for windows 10+
+Pure python activator for windows 10+ .
